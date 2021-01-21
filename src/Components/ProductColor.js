@@ -17,17 +17,17 @@ class ProductColor extends React.Component {
   render(props) {
     const { colors } = this.props;
     return (
-      <div className="item-color-wrapper">
-        <div className="item-color">
-          <p className="item-color__visible">{this.state.color}</p>
-          <div className="item-color__hidden">
+      <div className="color-wrapper">
+        <div className="color">
+          <p className="color__visible">{this.state.color}</p>
+          <div className="color__hidden">
             {colors.map((color) => (
               <ColorsItem color={color} setColor={this.setColor} />
             ))}
           </div>
         </div>
         <img
-          className="item-color__img"
+          className="color__img"
           src="./src/img/icons/arrow.png"
           alt="arrow"
         />

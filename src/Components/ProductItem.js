@@ -32,23 +32,26 @@ class ProductItem extends React.Component {
 
     return (
       <div className="product-wrapper">
-        <div className="item-top">
+        <div className="top">
           <ProductLabel label={product.label} />
           <ProductImg imgPath={product.imgPath} imgName={product.imgName} />
           <ProductWeight />
         </div>
         <ProductName title={product.title} description={product.description} />
-        <div className="item-center">
+
+        <div className="center">
           <ProductColor colors={product.color} />
           <ProductSumPrice sum={this.state.sum} />
         </div>
+
         <ProductCapacity
           cataloguePrice={product.cataloguePrice}
           defaultPrice={product.defaultPrice}
           defaultСapacity={product.defaultСapacity}
           changePrice={this.changePrice}
         />
-        <div className="item-bottom">
+
+        <div className="bottom">
           <ProductCounter changeCounter={this.changeCounter} />
           <ProductBuy />
         </div>
